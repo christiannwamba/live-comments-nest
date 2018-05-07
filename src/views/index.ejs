@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+    <title>Realtime comments</title>
+</head>
+<body>
+    
+    <div id="app">
+        <div class="message">
+            <h2 class="text-center">Interesting post</h2>
+            <hr>
+            <p>
+               Once you're done creating the quality content,
+                you still have the challenge of presenting it 
+                that clearly dictates what your blog is about.
+                 Images, text, and links need to be shown off just 
+                 right -- otherwise, readers might abandon your content, 
+                 if it's not aesthetically showcased in a way that's both 
+                 appealing and easy to follow.
+             </p>
+        </div>
+        <div class="comments">
+            <div class="comment-wrap">
+                <div class="photo">
+                    <div class="avatar" style="background-image: url('http://res.cloudinary.com/yemiwebby-com-ng/image/upload/v1525202285/avatar_xcah9z.svg')"></div>
+                </div>
+                <div class="comment-block">
+                    <textarea name="" id="" cols="30" rows="3" placeholder="Add comment and hit ENTER" @Keyup.enter="postComment"></textarea>
+                </div>
+            </div>
+            
+            
+            <div v-for="comment in comments">
+                <div class="comment-wrap">
+                    <div class="photo">
+                        <div class="avatar" style="background-image: url('http://res.cloudinary.com/yemiwebby-com-ng/image/upload/v1525202285/avatar_xcah9z.svg')"></div>
+                    </div>
+                    <div class="comment-block">
+                        <p class="comment-text"> <b>{{ comment.message }}</b> </p>
+                        <div class="bottom-comment">
+                            <div class="comment-mood">{{comment.mood}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.js"></script>
+    <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+    <script src="/main.js"></script>
+</body>
+</html>
