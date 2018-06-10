@@ -2,6 +2,8 @@
 
 A demo of a live comment application with sentiment analysis using Nest.js and Pusher.
 
+[View tutorial](https://pusher.com/tutorials/realtime-comments-nestjs)
+
 Screenshot of the demo app
 
 ![live-comment](https://user-images.githubusercontent.com/19610753/39490894-4c09b112-4d82-11e8-9cbb-a2b9186aaa11.gif)
